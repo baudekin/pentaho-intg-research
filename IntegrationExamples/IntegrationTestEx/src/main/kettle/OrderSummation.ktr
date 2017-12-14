@@ -9,6 +9,16 @@
     <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
+      <parameter>
+        <name>inputDataDir</name>
+        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/data</default_value>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>outputDir</name>
+        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/target</default_value>
+        <description/>
+      </parameter>
     </parameters>
     <log>
       <trans-log-table>
@@ -523,7 +533,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration/Order_file.csv</filename>
+    <filename>${inputDataDir}/Order_file.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -951,7 +961,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration/countryquantities</name>
+      <name>${outputDir}//countryquantities</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -1044,7 +1054,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration/orderquantities</name>
+      <name>${outputDir}/orderquantities</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
