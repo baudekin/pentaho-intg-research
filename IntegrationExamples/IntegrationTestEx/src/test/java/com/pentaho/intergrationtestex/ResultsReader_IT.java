@@ -24,6 +24,7 @@ import java.util.function.Consumer;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 // Credit: http://www.baeldung.com/run-shell-command-in-java
 class StreamGobbler implements Runnable {
@@ -51,10 +52,12 @@ public class ResultsReader_IT {
   static public void runTransform() throws IOException, InterruptedException {
     String pdidirstr = "/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration/";
     File pdidir = new File(pdidirstr);
+    String kettleSrcDir = System.getProperty( "kettleSrcDir" );
+    System.out.println("kettleSrcDir:::::" + kettleSrcDir);
     String cmd[] = new String[3];
     cmd[0] = "./pan.sh";
     cmd[1] = "-file";
-    cmd[2] = "OrderSummationTester.ktr";
+    cmd[2] = kettleSrcDir + "/OrderSummationTester.ktr";
     Process p = Runtime.getRuntime().exec( cmd, null, pdidir);
     StreamGobbler streamGobbler = new StreamGobbler( p.getInputStream(), System.out::println );
     Executors.newSingleThreadExecutor().submit( streamGobbler );
