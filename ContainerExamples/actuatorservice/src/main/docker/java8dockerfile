@@ -1,0 +1,20 @@
+# Ubuntu 15.04 with Java 8 installed.
+FROM ubuntu
+MAINTAINER Michael Bodkin, https://github.com/baudekin
+
+# Install Java.
+#  apt-get install -y byobu curl git htop man unzip vim wget && \
+RUN \
+  echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  add-apt-repository -y ppa:webupd8team/java && \
+  apt-get update && \
+  apt-get install -y oracle-java8-installer && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk8-installer
+
+# Add spring boot app
+# ADD target/actuator-service-1.0-SNAPSHOT.jar /tmp/app.jar

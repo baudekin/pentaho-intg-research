@@ -1,0 +1,25 @@
+version: '2.0'
+services:
+  actuator-service:
+    container_name: actuator-service
+    build:
+      context: .
+      dockerfile: ./java8dockerfile
+    image: actuator-service
+    entrypoint:
+      - java
+      - -jar
+      - /tmp/app.jar
+    expose:
+      - 9000
+      - 9001
+    ports:
+      - 9000:9000
+      - 9001:9001
+    networks:
+      - actuator-network
+    volumes:
+      - ../../../target/actuator-service-1.0-SNAPSHOT.jar:/tmp/app.jar
+networks:
+  actuator-network:
+    driver: bridge
