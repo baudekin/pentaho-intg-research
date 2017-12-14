@@ -30,6 +30,14 @@
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>2.20.1</version>
         <configuration>
+          <systemPropertyVariables>
+            <inputDataDir>${project.basedir}/src/main/data</inputDataDir>
+            <testFile>${project.basedir}/src/main/data/PentahoOrderSummation_IT.xlsx</testFile>
+            <!-- Leave the suffix .ktr off!!! -->
+            <transformUnderTest>${project.basedir}/src/main/kettle/OrderSummation</transformUnderTest>
+            <transformTester>${project.basedir}/src/main/kettle/OrderSummationTester.ktr</transformTester>
+            <outputDir>${project.build.testOutputDirectory}</outputDir>
+          </systemPropertyVariables>
           <includes>
             <include>**/*IT.java</include>
           </includes>
@@ -76,12 +84,14 @@
       <version>${junit.jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+    <!--  Uncomment to run regular unit tests
     <dependency>
       <groupId>org.junit.vintage</groupId>
       <artifactId>junit-vintage-engine</artifactId>
       <version>5.1.0-M1</version>
       <scope>test</scope>
     </dependency>
+    -->
     <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
     <dependency>
       <groupId>com.google.code.gson</groupId>

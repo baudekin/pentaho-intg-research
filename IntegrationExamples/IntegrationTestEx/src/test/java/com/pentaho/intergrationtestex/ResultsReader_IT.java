@@ -50,14 +50,41 @@ public class ResultsReader_IT {
   // TODO: Explain
   @BeforeAll
   static public void runTransform() throws IOException, InterruptedException {
-    String pdidirstr = "/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration/";
+    // Get the path to spoon from PEHATAHO_HOME enviroment variable.
+    String pdidirstr = System.getenv("PENTAHO_HOME");
+
+    if (pdidirstr == null) {
+      System.err.println("PENTAHO_HOME is not set, please set to PDI location of pan.");
+      assert pdidirstr != null;
+    }
+    System.out.println("Running pan from " + pdidirstr);
+
     File pdidir = new File(pdidirstr);
-    String kettleSrcDir = System.getProperty( "kettleSrcDir" );
-    System.out.println("kettleSrcDir:::::" + kettleSrcDir);
-    String cmd[] = new String[3];
+
+    // Get the Transform under Test from the pom file
+    String transformUnderTest = System.getProperty( "transformUnderTest" );
+
+    // Get the tester transfrom
+    String transformTester = System.getProperty( "transformTester" );
+
+    // Get the input data dir
+    String inputDataDir = System.getProperty( "inputDataDir" );
+
+    // Get the output dir
+    String outputDir = System.getProperty( "outputDir" );
+
+    // Get Test file
+    String testFile = System.getProperty( "testFile" );
+
+    // Setup and run pan to exectute the Tester Transform
+    String cmd[] = new String[7];
     cmd[0] = "./pan.sh";
     cmd[1] = "-file";
-    cmd[2] = kettleSrcDir + "/OrderSummationTester.ktr";
+    cmd[2] = transformTester;
+    cmd[3] = "-param:inputDir=" + inputDataDir;
+    cmd[4] = "-param:outputDir=" + outputDir;
+    cmd[5] = "-param:testFile=" + testFile;
+    cmd[6] = "-param:transformUnderTest=" + transformUnderTest;
     Process p = Runtime.getRuntime().exec( cmd, null, pdidir);
     StreamGobbler streamGobbler = new StreamGobbler( p.getInputStream(), System.out::println );
     Executors.newSingleThreadExecutor().submit( streamGobbler );
