@@ -11,18 +11,19 @@
     <parameters>
       <parameter>
         <name>outputDir</name>
-        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/target</default_value>
-        <description>Location for output files.</description>
+        <default_value/>
+        <description>Location for output files. &lt;projectdir>/target
+</description>
       </parameter>
       <parameter>
         <name>testFile</name>
-        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx</default_value>
-        <description>Excel Spread Sheet containing tests.</description>
+        <default_value/>
+        <description>Excel Spread Sheet containing tests. &lt;projectdir>/src/main/data/PentahoOrderSummation_IT.xlsx</description>
       </parameter>
       <parameter>
         <name>transformUnderTest</name>
-        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummation</default_value>
-        <description>Transform Execution Step automatically adds .ktr</description>
+        <default_value/>
+        <description>Transform Execution Step automatically adds .ktr &lt;projectdir>/src/main/kettle/Ordersummation</description>
       </parameter>
     </parameters>
     <log>
