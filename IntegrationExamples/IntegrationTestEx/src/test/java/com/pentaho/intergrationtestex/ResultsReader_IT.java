@@ -107,11 +107,16 @@ public class ResultsReader_IT {
     cmd[ 4 ] = "-param:outputDir=" + outputDir;
     cmd[ 5 ] = "-param:testFile=" + testFile;
     cmd[ 6 ] = "-param:transformUnderTest=" + transformUnderTest;
+    System.out.println( "Running: " );
+    for ( String v : cmd ) { System.out.println( "  " + v.toString()); }
     Process p = Runtime.getRuntime().exec( cmd, null, pdidir );
     StreamGobbler streamGobbler = new StreamGobbler( p.getInputStream(), System.out::println );
     Executors.newSingleThreadExecutor().submit( streamGobbler );
     int exitCode = p.waitFor();
-    assert exitCode == 0;
+    if ( exitCode != 0 ) {
+      System.err.println( "The privious spoon command did not run." );
+      assert exitCode == 0;
+    }
 
     // Get json Files
     File[] files = pdidir.listFiles( new FilenameFilter() {
