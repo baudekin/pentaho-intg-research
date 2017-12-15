@@ -7,8 +7,10 @@ goal of this research is to automate the testing of Adaptive Execution Layer (AE
 kettle test transforms. 
 
 ## Project Structure
+```
 pentaho-intg-research
    |
    |-- 
+```
 
 https://spring.io/guides/gs/rest-service/
