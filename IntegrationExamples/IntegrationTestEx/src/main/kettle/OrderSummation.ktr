@@ -11,13 +11,13 @@
     <parameters>
       <parameter>
         <name>inputDataDir</name>
-        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/data</default_value>
-        <description/>
+        <default_value/>
+        <description>Input files location &lt;projectdir>/src/main/data.</description>
       </parameter>
       <parameter>
         <name>outputDir</name>
-        <default_value>/Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/target</default_value>
-        <description/>
+        <default_value/>
+        <description>Output files location &lt;projectdir>/src/target</description>
       </parameter>
     </parameters>
     <log>

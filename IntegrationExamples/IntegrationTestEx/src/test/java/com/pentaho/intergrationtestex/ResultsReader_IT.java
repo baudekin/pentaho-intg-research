@@ -103,7 +103,7 @@ public class ResultsReader_IT {
     cmd[ 0 ] = "./pan.sh";
     cmd[ 1 ] = "-file";
     cmd[ 2 ] = transformTester;
-    cmd[ 3 ] = "-param:inputDir=" + inputDataDir;
+    cmd[ 3 ] = "-param:inputDataDir=" + inputDataDir;
     cmd[ 4 ] = "-param:outputDir=" + outputDir;
     cmd[ 5 ] = "-param:testFile=" + testFile;
     cmd[ 6 ] = "-param:transformUnderTest=" + transformUnderTest;
