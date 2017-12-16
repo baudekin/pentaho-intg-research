@@ -78,12 +78,6 @@
       <version>1.0.0</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>${junit.jupiter.version}</version>
-      <scope>test</scope>
-    </dependency>
     <!--  Uncomment to run regular unit tests
     <dependency>
       <groupId>org.junit.vintage</groupId>
