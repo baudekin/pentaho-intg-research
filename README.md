@@ -42,7 +42,7 @@ pentaho-intg-research
   * To run:
 ```
 export PENTAHO_HOME=/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration
-mvn verirfy
+mvn verify
 ```
 
 ## References
