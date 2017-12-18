@@ -37,6 +37,34 @@ pentaho-intg-research
 ```
   mvn verify
 ```
+ * You should see the following if it ran succesfully:
+```
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.426 s - in com.pentaho.intg.res.salutation.SalutationConfigurationIntgs
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-failsafe-plugin:2.20.1:integration-test (integration-test) @ actuator-service ---
+[INFO] Skipping execution of surefire because it has already been run for this configuration
+[INFO]
+[INFO] --- docker-maven-plugin:0.23.0:stop (stop) @ actuator-service ---
+[INFO] DOCKER> [actuator-service:latest] "actuator-service": Stop and removed container e61e759ed837 after 622 ms
+[INFO]
+[INFO] --- maven-failsafe-plugin:2.20.1:verify (default) @ actuator-service ---
+[INFO]
+[INFO] --- maven-failsafe-plugin:2.20.1:verify (integration-test) @ actuator-service ---
+[INFO]
+[INFO] --- maven-failsafe-plugin:2.20.1:verify (verify) @ actuator-service ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 27.845 s
+[INFO] Finished at: 2017-12-18T08:07:43-05:00
+[INFO] Final Memory: 29M/428M
+[INFO] ------------------------------------------------------------------------
+```
 * IntegrationExamples - Hosts all Intergration test examples. 
   * IntegrationTextEx - Is a simple data driven integration test based of off excell spreadsheet (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx) created from transform results from spoon. This tests the kettle transform OrderSummation (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummation.ktr) using OrderSummationTester (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummationTester.ktr) 
   * To run:
