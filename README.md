@@ -35,6 +35,7 @@ pentaho-intg-research
   * actuatorservice - Is a simple springboot application (https://spring.io/guides/gs/rest-service/) hosted on docker container. It is comprised of unit tests using surefire plugin and integration tests using failsafe plugin. 
    * To run all test execute:
 ```
+  cd pentaho-intg-research\ContainerExamples\actuatorservice
   mvn verify
 ```
    * You should see the following if it ran succesfully:
@@ -69,7 +70,8 @@ pentaho-intg-research
   * IntegrationTextEx - Is a simple data driven integration test based of off excell spreadsheet (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx) created from transform results from spoon. This tests the kettle transform OrderSummation (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummation.ktr) using OrderSummationTester (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummationTester.ktr) 
    * To run:
 ```
-export PENTAHO_HOME=/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration
+export PENTAHO_HOME=<pentaho root dir>/pdi-ee-client-8.X.X.x-xx/data-integration
+cd pentaho-intg-research/IntegrationExamples/IntegrationTestEx
 mvn verify
 ```
    * If it ran succesfully you should see:
