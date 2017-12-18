@@ -23,7 +23,9 @@ pentaho-intg-research
 │           │   └── com.pentaho.intg.res.salutation.SalutationConfigurationTests.txt
 ├── IntegrationExamples
 │   └── IntegrationTestEx
-│       └── target
+|       |
+|      ...
+│       └── target
 |           ├── failsafe-reports
 │           │   ├── TEST-com.pentaho.intergrationtestex.ResultsReader_IT.xml
 │           │   └── failsafe-summary.xml
