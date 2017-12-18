@@ -9,8 +9,24 @@ kettle test transforms.
 ## Project Structure
 ```
 pentaho-intg-research
-   |
-   |-- 
+├── ContainerExamples
+│   └── actuatorservice
+|       |
+|      ...
+│       └── target
+│           ├── failsafe-reports
+│           │   ├── TEST-com.pentaho.intg.res.salutation.SalutationConfigurationIntgs.xml
+│           │   ├── com.pentaho.intg.res.salutation.SalutationConfigurationIntgs.txt
+│           │   └── failsafe-summary.xml
+│           ├── surefire-reports
+│           │   ├── TEST-com.pentaho.intg.res.salutation.SalutationConfigurationTests.xml
+│           │   └── com.pentaho.intg.res.salutation.SalutationConfigurationTests.txt
+├── IntegrationExamples
+│   └── IntegrationTestEx
+│       └── target
+|           ├── failsafe-reports
+│           │   ├── TEST-com.pentaho.intergrationtestex.ResultsReader_IT.xml
+│           │   └── failsafe-summary.xml
 ```
 
 https://spring.io/guides/gs/rest-service/
