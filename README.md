@@ -33,11 +33,11 @@ pentaho-intg-research
 
 * ContainerExamples - Hosts all the examples related to managing docker from maven.
   * actuatorservice - Is a simple springboot application (https://spring.io/guides/gs/rest-service/) hosted on docker container. It is comprised of unit tests using surefire plugin and integration tests using failsafe plugin. 
-  * To run all test execute:
+   * To run all test execute:
 ```
   mvn verify
 ```
- * You should see the following if it ran succesfully:
+   * You should see the following if it ran succesfully:
 ```
 [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.426 s - in com.pentaho.intg.res.salutation.SalutationConfigurationIntgs
 [INFO]
@@ -67,12 +67,12 @@ pentaho-intg-research
 ```
 * IntegrationExamples - Hosts all Intergration test examples. 
   * IntegrationTextEx - Is a simple data driven integration test based of off excell spreadsheet (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx) created from transform results from spoon. This tests the kettle transform OrderSummation (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummation.ktr) using OrderSummationTester (https://github.com/baudekin/pentaho-intg-research/blob/master/IntegrationExamples/IntegrationTestEx/src/main/kettle/OrderSummationTester.ktr) 
-  * To run:
+   * To run:
 ```
 export PENTAHO_HOME=/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration
 mvn verify
 ```
- * If it ran succesfully you should see:
+   * If it ran succesfully you should see:
  ```
  ERROR] Tests run: 72, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 18.089 s <<< FAILURE! - in com.pentaho.intergrationtestex.ResultsReader_IT
 [ERROR] Test: /Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx|RowsAfterExecution:14(countrySumTests())  Time elapsed: 0.005 s  <<< FAILURE!
