@@ -44,7 +44,34 @@ pentaho-intg-research
 export PENTAHO_HOME=/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration
 mvn verify
 ```
+ * If it ran succesfully you should see:
+ ```
+ ERROR] Tests run: 72, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 18.089 s <<< FAILURE! - in com.pentaho.intergrationtestex.ResultsReader_IT
+[ERROR] Test: /Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx|RowsAfterExecution:14(countrySumTests())  Time elapsed: 0.005 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[identical]> but was:<[changed]>
 
+[ERROR] Test: /Users/mbodkin/repos/pentaho-intg-research/IntegrationExamples/IntegrationTestEx/src/main/data/PentahoOrderSummation_IT.xlsx|RowsAfterExecution:17(countrySumTests())  Time elapsed: 0 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[identical]> but was:<[deleted]>
+
+[INFO]
+[INFO] Results:
+[INFO]
+[ERROR] Failures:
+[ERROR]   expected:<[identical]> but was:<[changed]>
+[ERROR]   expected:<[identical]> but was:<[deleted]>
+[INFO]
+[ERROR] Tests run: 72, Failures: 2, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-failsafe-plugin:2.20.1:verify (integration-test) @ IntegrationTestEx ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 22.024 s
+[INFO] Finished at: 2017-12-18T08:05:29-05:00
+[INFO] Final Memory: 10M/169M
+[INFO] ------------------------------------------------------------------------
+ ```
 ## References
 ### Plugins
 * surefire - Unit Test Framework http://maven.apache.org/surefire/maven-surefire-plugin/
