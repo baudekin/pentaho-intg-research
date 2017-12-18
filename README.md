@@ -102,6 +102,8 @@ org.junit.ComparisonFailure: expected:<[identical]> but was:<[deleted]>
 [INFO] Final Memory: 10M/169M
 [INFO] ------------------------------------------------------------------------
  ```
+## Design
+
 ## References
 ### Plugins
 * surefire - Unit Test Framework http://maven.apache.org/surefire/maven-surefire-plugin/
