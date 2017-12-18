@@ -44,3 +44,12 @@ pentaho-intg-research
 export PENTAHO_HOME=/Users/mbodkin/clients/pdi-ee-client-8.0.0.1-27/data-integration
 mvn verirfy
 ```
+
+## References
+### Plugins
+* surefire - Unit Test Framework http://maven.apache.org/surefire/maven-surefire-plugin/
+* failsafe - Integration Test Framework http://maven.apache.org/surefire/maven-failsafe-plugin/
+* junit-jupiter-engine - JUnit 5 which enables dyanmic testing http://junit.org/junit5/docs/current/user-guide/
+* docker-maven-plugin - Manges docker containers https://github.com/fabric8io/docker-maven-plugin
+* spring-boot-maven-plugin - Manages creating simple web based applications https://docs.spring.io/spring-boot/docs/current/maven-plugin/index.html
+* gson - Googles json parser https://github.com/google/gson
