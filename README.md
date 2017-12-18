@@ -32,8 +32,8 @@ pentaho-intg-research
 ```
 
 * ContainerExamples - Hosts all the examples related to managing docker from maven.
-  * actuatorservice - Is a simple springboot application (https://spring.io/guides/gs/rest-service/) hosted on docker container. It is comprised of unit tests using surefire plugin and integration tests using failsafe plugin. T
-  o run all test execute:
+  * actuatorservice - Is a simple springboot application (https://spring.io/guides/gs/rest-service/) hosted on docker container. It is comprised of unit tests using surefire plugin and integration tests using failsafe plugin. 
+  * To run all test execute:
 ```
   mvn verify
 ```
