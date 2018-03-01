@@ -103,7 +103,7 @@ org.junit.ComparisonFailure: expected:<[identical]> but was:<[deleted]>
 [INFO] ------------------------------------------------------------------------
  ```
 ## Design
-
+![Alt text](https://github.com/baudekin/pentaho-intg-research/blob/master/doc/img/IT_Presentation.jpg)
 ## References
 ### Plugins
 * surefire - Unit Test Framework http://maven.apache.org/surefire/maven-surefire-plugin/
