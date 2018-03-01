@@ -119,21 +119,22 @@ public class ResultsReader_IT {
     }
 
     // Get json Files
-    File[] files = pdidir.listFiles( new FilenameFilter() {
+    File outputdir = new File( outputDir );
+    File[] files = outputdir.listFiles( new FilenameFilter() {
       public boolean accept( File dir, String nameFilter ) {
-        return nameFilter.startsWith( "PentahoOrderSummation_IT_ExecutionResults" );
+        return nameFilter.startsWith( "PentahoOrderSummation_IT_OrderNumberResults" );
       }
     } );
     String executionResultFile = files[ files.length - 1 ].getAbsolutePath();
 
-    files = pdidir.listFiles( new FilenameFilter() {
+    files = outputdir.listFiles( new FilenameFilter() {
       public boolean accept( File dir, String nameFilter ) {
         return nameFilter.startsWith( "PentahoCountryOrderSummation_IT_Results" );
       }
     } );
     String countryOrderSummationFile = files[ files.length - 1 ].getAbsolutePath();
 
-    files = pdidir.listFiles( new FilenameFilter() {
+    files = outputdir.listFiles( new FilenameFilter() {
       public boolean accept( File dir, String nameFilter ) {
         return nameFilter.startsWith( "PentahoOrderSummation_IT_OrderNumberResults" );
       }
